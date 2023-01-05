@@ -1,0 +1,334 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  :root {
+    --first-color: white;
+    --second-color: #d6dfe6;
+    --third-color: #a6c5da;
+    --fourth-color: #eaeeef;
+    --fifth-color: #67777e;
+  
+    --first-font-family: "Comfortaa";
+  }
+  
+  body {
+    width: 100%;
+    background-image: url(https://cdn.pixabay.com/photo/2022/11/24/02/28/clouds-7613361_960_720.png);
+  }
+  
+  .wrapper {
+    width: 65%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .header {
+    padding: 25px 20px;
+    height: auto;
+    margin: 20px auto;
+    background-color: var(--first-color);
+    border-radius: 7px;
+  }
+  
+  .currentDate,
+  .date,
+  .currentTime,
+  .dayOfWeek,
+  .descriptionOfWeather {
+    font-size: 16px;
+    font-family: var(--first-font-family);
+    letter-spacing: 2px;
+    font-weight: normal;
+    color: var(--third-color);
+    line-height: 0.7;
+    text-align: left;
+  }
+  
+  .descriptionOfWeather {
+    text-transform: capitalize;
+  }
+  
+  #icon {
+    width: 200px;
+    margin: 40px 0 0 0;
+    padding: 0 0;
+  }
+  
+  .nameTown h1 {
+    font-size: 26px;
+    font-family: var(--first-font-family);
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--third-color);
+    line-height: 0.7;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  #form-search {
+    margin-top: 30px;
+  }
+  
+  #searchForm {
+    border: 3px solid var(--second-color);
+    background-color: var(--first-color);
+    height: 40px;
+    border-radius: 7px;
+  }
+  
+  #searchForm:hover,
+  #searchForm:active,
+  #searchForm:focus {
+    border: 2px solid var(--fourth-color);
+    box-shadow: 1px 1px 3px 0px var(--fourth-color);
+  }
+  
+  ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: var(--fourth-color);
+    font-family: var(--first-font-family);
+    font-size: 12px;
+  }
+  :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: var(--fifth-color);
+    font-family: var(--first-font-family);
+    font-size: 12px;
+  }
+  ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: var(--fifth-color);
+    font-family: var(--first-font-family);
+    font-size: 12px;
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: var(--fifth-color);
+    font-family: var(--first-font-family);
+    font-size: 12px;
+  }
+  
+  #buttonSearch,
+  #buttonCurrent {
+    background-color: var(--second-color);
+    color: var(--third-color);
+    min-width: 40px;
+  }
+  #buttonCurrent {
+    margin-left: 8%;
+  }
+  
+  #buttonSearch:hover,
+  #buttonCurrent:hover {
+    background-color: var(--third-color);
+    color: var(--first-color);
+    box-shadow: 1px 1px 3px 0px var(--fourth-color);
+  }
+  
+  .tempGeneralCover {
+    font-size: 26px;
+    font-family: var(--first-font-family);
+    letter-spacing: 2px;
+    font-weight: normal;
+    color: var(--third-color);
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: left;
+  }
+  
+  .celsiusContainer,
+  .fahrenheit {
+    margin-left: 5px;
+  }
+  #slash {
+    margin-left: 16px;
+  }
+  .celsius,
+  .fahrenheit {
+    font-size: 26px;
+    font-family: var(--first-font-family);
+    outline: none;
+    border: none;
+    background: transparent;
+    font-weight: normal;
+    color: var(--third-color);
+    margin: 0 0;
+    padding: 0 0;
+    text-decoration: none;
+  }
+  
+  .celsius:hover,
+  .fahrenheit:hover {
+    color: var(--second-color);
+  }
+  
+  .celsius:focus,
+  .fahrenheit:focus {
+    color: var(--third-color);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    border-radius: 7px;
+  }
+  
+  .description1 {
+    color: var(--fifth-color);
+    font-family: var(--first-font-family);
+    font-size: 14px;
+    line-height: 0.7;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    text-align: left;
+    word-wrap: normal;
+  }
+  
+  .celsius1,
+  .fahrenheit1 {
+    font-size: 14px;
+    font-family: var(--first-font-family);
+    outline: none;
+    border: none;
+    background: transparent;
+    font-weight: normal;
+    color: var(--fifth-color);
+    margin: 0 0;
+    padding: 0 0;
+    text-decoration: none;
+  }
+  
+  .celsius1:hover,
+  .fahrenheit1:hover {
+    color: var(--second-color);
+  }
+  
+  .celsius1:focus,
+  .fahrenheit1:focus {
+    color: var(--fifth-color);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    border-radius: 7px;
+  }
+  .dataFeltTemp {
+    margin-bottom: 16px;
+  }
+  .feltTemp,
+  #feelsLike,
+  .celsius1,
+  .slash1,
+  .fahrenheit1 {
+    display: inline;
+  }
+  /* .otherInf, .pressure, .unitPressure */
+  footer {
+    min-height: 50px;
+    background-color: white;
+    padding: 0 0;
+    margin: 20px auto 0 auto;
+    border-radius: 7px;
+  }
+  
+  .copyright {
+    font-family: var(--first-font-family);
+    color: var(--third-color);
+    text-align: center;
+    margin: 5px auto;
+    padding-top: 15px;
+  }
+  
+  .copyright a {
+    text-decoration: none;
+    color: var(--third-color);
+  }
+  
+  .copyright a:hover {
+    color: var(--second-color);
+  }
+  
+  /* screens from 500px to 899px */
+  @media (min-width: 500px) and (max-width: 899px) {
+    .currentDate,
+    .date,
+    .currentTime,
+    .dayOfWeek,
+    .descriptionOfWeather {
+      font-size: 12px;
+      letter-spacing: 0px;
+      font-weight: normal;
+      line-height: 15px;
+    }
+  
+    .nameTown h1 {
+      font-size: 18px;
+    }
+  
+    .tempGeneralCover {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  
+    .celsius,
+    .fahrenheit {
+      font-size: 18px;
+    }
+  
+    .description1 {
+      letter-spacing: 0px;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+  
+    footer {
+      min-height: 40px;
+    }
+  
+    .copyright {
+      margin: 5px auto;
+      padding-top: 10px;
+      font-size: 12px;
+    }
+  }
+  
+  /* screens from 250px to 499px */
+  @media (min-width: 250px) and (max-width: 499px) {
+    .currentDate,
+    .date,
+    .currentTime,
+    .dayOfWeek,
+    .descriptionOfWeather {
+      font-size: 10px;
+      letter-spacing: 1px;
+      line-height: 15px;
+    }
+  
+    .nameTown h1 {
+      font-size: 18px;
+    }
+    .main {
+      flex-wrap: wrap;
+    }
+    .tempGeneralCover {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    .celsius,
+    .fahrenheit {
+      font-size: 18px;
+    }
+  
+    .description1 {
+      letter-spacing: 0px;
+      margin-top: 5px;
+      font-size: 10px;
+    }
+  
+    footer {
+      min-height: 40px;
+    }
+  
+    .copyright {
+      margin: 10px auto;
+      padding-top: 15px;
+      font-size: 10px;
+    }
+  }
+  

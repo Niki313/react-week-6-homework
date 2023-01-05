@@ -13,6 +13,7 @@ export default function App() {
           <div class="copyright">
             © Create by_
             <a
+              rel="noreferrer"
               href="https://www.linkedin.com/in/nataliia-dorosh/"
               title="Profile Nataliia Dorosh"
               target="_blank"
@@ -26,3 +27,10 @@ export default function App() {
     </div>
   );
 }
+
+
+
+
+
+
+

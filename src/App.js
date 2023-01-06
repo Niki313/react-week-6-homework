@@ -1,16 +1,15 @@
 import React from "react";
-import Header from "./Header";
+import Weather from "./Weather";
 
 import "./styles.css";
 
 export default function App() {
   return (
     <div className="App">
-      <div class="wrapper">
-        <Header />
-        <div class="weather-forecast" id="forecast"></div>
+      <div className="wrapper">
+        <Weather />
         <footer>
-          <div class="copyright">
+          <div className="copyright">
             © Create by_
             <a
               rel="noreferrer"
@@ -27,10 +26,3 @@ export default function App() {
     </div>
   );
 }
-
-
-
-
-
-
-

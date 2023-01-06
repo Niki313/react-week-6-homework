@@ -35,6 +35,10 @@ export default function Weather() {
     let minutes = props.date.getMinutes();
     let ampm = hours >= 12 ? "PM" : "AM";
 
+    if (month < 10) {
+      month = `0${month}`;
+    }
+
     if (day < 10) {
       day = `0${day}`;
     }
@@ -89,7 +93,6 @@ export default function Weather() {
     event.preventDefault();
 
     search();
-    searchCurrentLocation ();
   }
 
   function search() {
@@ -101,11 +104,15 @@ export default function Weather() {
 
   function searchCurrentLocation (props){
     let apiKey = "3c3046eb3665ca592e70fff5ccda526b";
-    let lon = props.coordinates.lon;
-    let lat = props.coordinates.lat;
+    let lon = props.coords.longitude;
+    let lat = props.coords.latitude;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     
     axios.get(apiUrl).then(displayWeather);
+  }
+
+  function handleCurrentLocation(){
+    navigator.geolocation.getCurrentPosition(searchCurrentLocation)
   }
 
   function updateCity(event) {
@@ -178,10 +185,10 @@ export default function Weather() {
 
                     <button
                       id="buttonCurrent"
-                      type="submit"
                       value="Current"
                       className="btn col-4"
                       title="Current location"
+                      onClick={handleCurrentLocation}
                     >
                       <i className="fa-solid fa-magnifying-glass-location"></i>
                     </button>
@@ -263,7 +270,6 @@ export default function Weather() {
     );
   } else {
     search();
-    searchCurrentLocation ();
     return null;
   }
 }

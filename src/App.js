@@ -19,7 +19,7 @@ export default function App() {
             >
               Nataliia Dorosh
             </a>
-            {" "} 2022 {" "} *
+            {" "} 2022 {"   "} *
             <a href="https://github.com/Niki313/react-week-6-homework.git" rel="noreferrer" title="Link to GitHub" target="_blank">GitHub</a>
             *
           </div>

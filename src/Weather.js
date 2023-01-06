@@ -107,7 +107,6 @@ export default function Weather() {
     
     axios.get(apiUrl).then(displayWeather);
   }
-  
 
   function updateCity(event) {
     setCity(event.target.value);
@@ -257,9 +256,9 @@ export default function Weather() {
                 km/h
               </p>
             </div>
-            <WeatherForecast coordinates={weather.coordinates} />
           </div>
         </div>
+        <WeatherForecast coordinates={weather.coordinates} />
       </div>
     );
   } else {

@@ -10,7 +10,7 @@ export default function App() {
         <Weather />
         <footer>
           <div className="copyright">
-            © Create by_
+            © Create by {" "}
             <a
               rel="noreferrer"
               href="https://www.linkedin.com/in/nataliia-dorosh/"
@@ -19,7 +19,9 @@ export default function App() {
             >
               Nataliia Dorosh
             </a>
-            _2022
+            {" "} 2022 {" "} *
+            <a href="https://github.com/Niki313/react-week-6-homework.git" rel="noreferrer" title="Link to GitHub" target="_blank">GitHub</a>
+            *
           </div>
         </footer>
       </div>
